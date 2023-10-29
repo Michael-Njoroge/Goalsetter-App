@@ -1,0 +1,28 @@
+{
+  "name": "mern-auth2",
+  "version": "1.0.0",
+  "description": "GoalSetter App Mern Auth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-Njoroge/mern-auth2.git"
+  },
+  "author": "Michael Njoroge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Michael-Njoroge/mern-auth2/issues"
+  },
+  "homepage": "https://github.com/Michael-Njoroge/mern-auth2#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
