@@ -49,8 +49,22 @@ const registerUser = asycHandler(async(req, res) => {
 //@route    POST /api/users/login
 //@access   Public
 const loginUser = asycHandler(async(req, res) => {
-    res.json({message: 'Login User'})
-})
+    const {email, password} = req.body
+
+    //check for user email
+    const user = await User.findOne({email})
+
+    if(user && (await bcrypt.compare(password,user.password))) {
+        res.json({
+            _id: user.id,
+            name: user.name,
+            email: user.email,
+        })
+    }else{
+        res.status(400)
+        throw new Error('Invalid credentials')
+    }
+ })
 
 //@desc    Get user data
 //@route    GET /api/users/me
